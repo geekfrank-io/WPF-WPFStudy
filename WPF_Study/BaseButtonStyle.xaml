@@ -1,4 +1,16 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+    <Style TargetType="{x:Type Button}">
+        <!--作用于全局的TargetType可写为 TargetType="{x:Type Button}" 或者 TargetType="Button"，建议使用第一种，保持xaml的一致性-->
+        <Setter Property ="Background" Value="Yellow"></Setter>
+        <Setter Property="FontSize" Value="10"></Setter>
+    </Style>
+
+    <Style x:Key="LoginStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <!--BasedOn参数值必须写为x:Type Button，若继承的样式有Key，也可写为Key值-->
+        <Setter Property="Background" Value="Green"></Setter>
+    </Style>
+    <Style x:Key="QuitStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+        <Setter Property="Background" Value="Red"></Setter>
+    </Style>
 </ResourceDictionary>

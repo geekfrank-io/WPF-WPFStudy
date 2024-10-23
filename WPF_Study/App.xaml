@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:WPF_Study"
              StartupUri="MainWindow.xaml"><!--程序入口-->
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="BaseButtonStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
